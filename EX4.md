@@ -20,11 +20,11 @@ salary NUMBER);
 CREATE OR REPLACE PROCEDURE insert_employee AS
 BEGIN
 INSERT INTO employee(empid, empname, dept, salary)
-VALUES (1,'John','HR',50000);
+VALUES (1,'PRAVEEN','CSE',50000);
 INSERT INTO employee(empid, empname, dept, salary)
-VALUES (2,'James','IT',60000);
+VALUES (2,'PRAKASH','IT',60000);
 INSERT INTO employee(empid, empname, dept, salary)
-VALUES (3,'Jones','Finance',55000);
+VALUES (3,'SANTHOSH','Finance',55000);
 COMMIT;
 FOR emp_rec IN (SELECT * FROM employee) LOOP
 DBMS_OUTPUT.PUT_LINE('Employee ID: ' || emp_rec.empid || 'Name' || emp_rec.empname
