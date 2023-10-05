@@ -35,7 +35,8 @@ END;
 ```
 
 ### Output:
-![image](https://github.com/Prajeeth17/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/120513885/c6ad4efc-9054-4f05-b62d-2303f2ce4548)
+<img width="338" alt="image" src="https://github.com/Prakashmathi2004/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/118350045/64efcbdf-048e-44e2-b14c-30412703e90a">
+
 
 ### Result:
 Thus a procedure has been successfully created and executed.
