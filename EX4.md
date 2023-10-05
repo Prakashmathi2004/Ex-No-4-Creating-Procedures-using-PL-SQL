@@ -1,41 +1,41 @@
-# Ex. No: 4 Creating Procedures using PL/SQL
+# Ex. No. 4: Creating Procedures using PL/SQL
 
-### AIM: 
-To create a procedure using PL/SQL.
+### AIM: To create a procedure using PL/SQL
 
 ### Steps:
 1. Create employee table with following attributes (empid NUMBER, empname VARCHAR(10), dept VARCHAR(10),salary NUMBER);
 2. Create a procedure named as insert_employee data.
-3. Inside the procdure block, write the query for inserting the values into the employee table.
+3. Inside the procedure block, write the query for inserting the values into the employee table.
 4. End the procedure.
-5. Call the insert_employee data procedure to insert the values into the employee table.
+5. Call the insert_employee procedure to insert the values into the employee table.
 6. Display the employee table
 
 ### Program:
+```sql
+CREATE TABLE employee(empid NUMBER,
+empname VARCHAR(10),
+ dept VARCHAR(10),
+salary NUMBER);
+
+CREATE OR REPLACE PROCEDURE insert_employee AS
+BEGIN
+INSERT INTO employee(empid, empname, dept, salary)
+VALUES (1,'John','HR',50000);
+INSERT INTO employee(empid, empname, dept, salary)
+VALUES (2,'James','IT',60000);
+INSERT INTO employee(empid, empname, dept, salary)
+VALUES (3,'Jones','Finance',55000);
+COMMIT;
+FOR emp_rec IN (SELECT * FROM employee) LOOP
+DBMS_OUTPUT.PUT_LINE('Employee ID: ' || emp_rec.empid || 'Name' || emp_rec.empname
+|| 'Department' || emp_rec.dept || 'Salary' || emp_rec.salary);
+END LOOP;
+END;
+/
 ```
-CREATE TABLE ep1(
-       empid NUMBER,
-       empname VARCHAR(10),
-       dept VARCHAR(10),
-       salary NUMBER
-       );
-       CREATE OR REPLACE PROCEDURE emp_data AS
-       BEGIN
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(1,'Raja','MD',10000000);
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(2,'gokul','HR',5000000);
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(3,'Yuva','Finance',200000);
-       COMMIT;
-       FOR emp_rec IN (SELECT * FROM ep1)LOOP
-       DBMS_OUTPUT.PUT_LINE('EMPLOYEE ID:'||emp_rec.empid||',EMPLOYEE NAME:'|| emp_rec.empname||
-       ',DEPARTMENT:'||emp_rec.dept||',SALARY:'||emp_rec.salary);
-       END LOOP;
-       END;
-       /
-```
+
 ### Output:
-![image](https://github.com/yuvabharathib/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/113497404/a4291fda-22f2-4fbe-8ea9-8522bb614288)
+![image](https://github.com/Prajeeth17/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/120513885/c6ad4efc-9054-4f05-b62d-2303f2ce4548)
+
 ### Result:
-Thus,the output has been succesfully verified.
+Thus a procedure has been successfully created and executed.
