@@ -35,7 +35,7 @@ END;
 ```
 
 ### Output:
-<img width="338" alt="image" src="https://github.com/Prakashmathi2004/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/118350045/64efcbdf-048e-44e2-b14c-30412703e90a">
+<img width="593" alt="image" src="https://github.com/Prakashmathi2004/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/118350045/a0dfdfc3-8445-418b-96af-6cb60c5c738b">
 
 
 ### Result:
